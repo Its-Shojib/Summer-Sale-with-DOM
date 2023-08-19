@@ -1,22 +1,22 @@
 // Shared Items
 let container = document.getElementById("container")
 let count = container.childElementCount;
-count =0;
-let makePurchase =document.getElementById("btnMakePurchase");
-let btnApply =document.getElementById("btnCoupon");
+count = 0;
+let makePurchase = document.getElementById("btnMakePurchase");
+let btnApply = document.getElementById("btnCoupon");
 
-function getValue(ID){
+function getValue(ID) {
     let totalField = document.getElementById(ID);
     let totalString = totalField.innerText;
     let totalPrice = parseFloat(totalString);
     return totalPrice;
 }
-function setValue(value,ID){
+function setValue(value, ID) {
     let Field = document.getElementById(ID);
     Field.innerText = value.toFixed(2);
 }
 
-function addToCart(event){
+function addToCart(event) {
     let item = event.childNodes[3].childNodes[1].innerText;
     let priceNode = event.childNodes[3].childNodes[5].childNodes[0].innerText;
     let price = parseFloat(priceNode);
@@ -29,33 +29,34 @@ function addToCart(event){
 
     let totalPrice = getValue("totalPrice");
     let total = totalPrice + price;
-    setValue(total,"totalPrice");
-    setValue(total,"total");
-    
-    if(total > 0){
+    setValue(total, "totalPrice");
+    setValue(total, "total");
+
+    if (total > 0) {
         makePurchase.removeAttribute("disabled");
     }
-    else{
-        makePurchase.setAttribute("disabled",true);
+    else {
+        makePurchase.setAttribute("disabled", true);
     }
-    if(total >= 200){
+    if (total >= 200) {
         btnApply.removeAttribute("disabled");
+        btnApply.classList.add()
     }
-    else{
-        btnApply.setAttribute("disabled",true);
+    else {
+        btnApply.setAttribute("disabled", true);
     }
 }
 
-btnApply.addEventListener("click", function (){
-  let couponField = document.getElementById("inputCoupon");
-  let couponText = couponField.value;
-  if(couponText == "SELL20"){
-    let totalPrice = getValue("totalPrice");
-    let discount = (totalPrice/100)*20;
-    let Total = totalPrice - discount; 
-    setValue(discount,"discount");
-    setValue(Total,"total");
-  }
+btnApply.addEventListener("click", function () {
+    let couponField = document.getElementById("inputCoupon");
+    let couponText = couponField.value;
+    if (couponText == "SELL20") {
+        let totalPrice = getValue("totalPrice");
+        let discount = (totalPrice / 100) * 20;
+        let Total = totalPrice - discount;
+        setValue(discount, "discount");
+        setValue(Total, "total");
+    }
 })
 
 // function removeElement(){
