@@ -13,7 +13,7 @@ function getValue(ID){
 }
 function setValue(value,ID){
     let Field = document.getElementById(ID);
-    Field.innerText = value;
+    Field.innerText = value.toFixed(2);
 }
 
 function addToCart(event){
