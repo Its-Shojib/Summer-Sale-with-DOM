@@ -85,6 +85,7 @@ document.getElementById("goHome").addEventListener("click", function () {
     count = 0;
     Clear();
     makePurchase.setAttribute("disabled", true)
+    btnApply.setAttribute("disabled", true);
     /*👇 line is so so easy😁 but i have created the difficult one😐 */
     /*location.reload();*/
 })
