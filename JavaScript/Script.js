@@ -16,6 +16,13 @@ function setValue(value, ID) {
     Field.innerText = value.toFixed(2);
 }
 
+function Clear() {
+    document.getElementById("inputCoupon").value = "";
+    document.getElementById("totalPrice").innerText = "00.00";
+    document.getElementById("discount").innerText = "00.00";
+    document.getElementById("total").innerText = "00.00";
+}
+
 function addToCart(event) {
     let item = event.childNodes[3].childNodes[1].innerText;
     let priceNode = event.childNodes[3].childNodes[5].childNodes[0].innerText;
@@ -31,22 +38,23 @@ function addToCart(event) {
     let total = totalPrice + price;
     setValue(total, "totalPrice");
     setValue(total, "total");
-
-    if (total > 0) {
+    /* Make Purchase button Enable/Disable */
+    if (count > 0) {
         makePurchase.removeAttribute("disabled");
     }
     else {
         makePurchase.setAttribute("disabled", true);
     }
+    /* Apply button Enable/Disable */
     if (total >= 200) {
         btnApply.removeAttribute("disabled");
-        btnApply.classList.add()
     }
     else {
         btnApply.setAttribute("disabled", true);
     }
 }
 
+/* Apply Coupon Button and Set the Discount Value */
 btnApply.addEventListener("click", function () {
     let couponField = document.getElementById("inputCoupon");
     let couponText = couponField.value;
@@ -59,12 +67,17 @@ btnApply.addEventListener("click", function () {
     }
 })
 
-// function removeElement(){
-//     let removee = document.querySelectorAll(".remove");
-//     for (let remove of removee) {
-//       remove.style.display = "none";
-//     }
-//     let totalField = document.getElementById("totalPrice");
-//     totalField.innerText = "00";
-//     count = 0;
-// }
+
+
+/*Go Home Button Event and Clear all the Field */
+document.getElementById("goHome").addEventListener("click", function () {
+    let items = document.querySelectorAll(".removeItems");
+    for (let item of items) {
+        item.style.display = "none";
+    }
+    count = 0;
+    Clear();
+    makePurchase.setAttribute("disabled", true)
+    /*This line is so so easy😁 but i have created the difficult one😐 */
+    /*location.reload();*/
+})
