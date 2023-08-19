@@ -54,7 +54,7 @@
                     <!-- Cards -->
                     <div class="grid grid-cols-3 gap-5">
                         <!-- Card-1 -->
-                        <div class="card bg-base-100 h-fit cursor-pointer">
+                        <div onclick="addToCart(this)" class="card bg-base-100 h-fit cursor-pointer">
                             <figure class="h-48">
                                 <img class="bg-[#1111110D] bg-cover h-full w-full px-10 pt-10" src="./asset/prod1.png"
                                     alt="K. Accessories" class="rounded-xl" />
@@ -73,7 +73,7 @@
                             </div>
                         </div>
                         <!-- Card-2 -->
-                        <div class="card bg-base-100 h-fit cursor-pointer">
+                        <div onclick="addToCart(this)" class="card bg-base-100 h-fit cursor-pointer">
                             <figure class="h-48">
                                 <img class="bg-[#1111110D] bg-cover h-full w-full px-10 pt-10" src="./asset/prod2.png"
                                     alt="K. Accessories" class="rounded-xl" />
@@ -92,7 +92,7 @@
                             </div>
                         </div>
                         <!-- Card-3 -->
-                        <div class="card bg-base-100 h-fit cursor-pointer">
+                        <div onclick="addToCart(this)" class="card bg-base-100 h-fit cursor-pointer">
                             <figure class="h-48">
                                 <img class="bg-[#1111110D] bg-cover h-full w-full px-10 pt-10" src="./asset/prod3.png"
                                     alt="Home Cooker" class="rounded-xl" />
@@ -116,7 +116,7 @@
                     <!-- Cards -->
                     <div class="grid grid-cols-3 gap-5">
                         <!-- Card-4 -->
-                        <div class="card bg-base-100 h-fit cursor-pointer">
+                        <div onclick="addToCart(this)" class="card bg-base-100 h-fit cursor-pointer">
                             <figure class="h-48">
                                 <img class="bg-[#1111110D] bg-cover h-full w-full px-10 pt-10" src="./asset/prod4.png"
                                     alt="Sports Back Cap" class="rounded-xl" />
@@ -135,7 +135,7 @@
                             </div>
                         </div>
                         <!-- Card-5 -->
-                        <div class="card bg-base-100 h-fit cursor-pointer">
+                        <div onclick="addToCart(this)" class="card bg-base-100 h-fit cursor-pointer">
                             <figure class="h-48">
                                 <img class="bg-[#1111110D] bg-cover h-full w-full px-10 pt-10" src="./asset/prod5.png"
                                     alt="Full Jersey Set" class="rounded-xl" />
@@ -153,7 +153,7 @@
                             </div>
                         </div>
                         <!-- Card-6 -->
-                        <div class="card bg-base-100 h-fit cursor-pointer">
+                        <div onclick="addToCart(this)" class="card bg-base-100 h-fit cursor-pointer">
                             <figure class="h-48">
                                 <img class="bg-[#1111110D] bg-cover h-full w-full px-10 pt-10" src="./asset/prod6.png"
                                     alt="Sports cates" class="rounded-xl" />
@@ -177,7 +177,7 @@
                     <!-- Cards -->
                     <div class="grid grid-cols-3 gap-5">
                         <!-- Card-7 -->
-                        <div class="card bg-base-100 h-fit cursor-pointer">
+                        <div onclick="addToCart(this)" class="card bg-base-100 h-fit cursor-pointer">
                             <figure class="h-48">
                                 <img class="bg-[#1111110D] bg-cover h-full w-full px-10 pt-10" src="./asset/prod7.png"
                                     alt="Single Relax Chair" class="rounded-xl" />
@@ -196,7 +196,7 @@
                             </div>
                         </div>
                         <!-- Card-8 -->
-                        <div class="card bg-base-100 h-fit cursor-pointer">
+                        <div onclick="addToCart(this)" class="card bg-base-100 h-fit cursor-pointer">
                             <figure class="h-48">
                                 <img class="bg-[#1111110D] bg-cover h-full w-full px-10 pt-10" src="./asset/prod8.png"
                                     alt="Children play" class="rounded-xl" />
@@ -215,7 +215,7 @@
                             </div>
                         </div>
                         <!-- Card-9 -->
-                        <div class="card bg-base-100 h-fit cursor-pointer">
+                        <div onclick="addToCart(this)" class="card bg-base-100 h-fit cursor-pointer">
                             <figure class="h-48">
                                 <img class="bg-[#1111110D] bg-cover h-full w-full px-10 pt-10" src="./asset/prod9.png"
                                     alt="Flexible Sofa" class="rounded-xl" />
@@ -242,7 +242,7 @@
                     <!-- Coupon -->
                     <div class="space-y-3 py-3 px-1 bg-white w-10/12">
                         <h1 class="font-semibold">Have Coupon?</h1>
-                        <input class="p-2 border" type="text" name="" id="" placeholder="Coupon code">
+                        <input class="p-2 border" type="text" name="" id="inputCoupon" placeholder="Coupon code">
                         <button id="btnCoupon" class="bg-[#E527B2] text-white px-2 py-1 rounded-md"
                             disabled>Apply</button>
                     </div>
@@ -252,12 +252,12 @@
                     <!-- Make Purchase -->
                     <div class="h-fit bg-white py-3 mt-5 w-10/12 space-y-3">
                         <p class="text-2xl font-bold">Total price: <span id="totalPrice"
-                                class="text-[#11111180]">257.00</span> TK</p>
+                                class="text-[#11111180]">00.00</span> TK</p>
                         <p class="text-2xl font-bold">Discount : <span id="discount"
-                                class="text-[#11111180]">51.40</span> TK</p>
+                                class="text-[#11111180]">00.00</span> TK</p>
                         <p class="text-2xl font-bold pb-5">Total: <span id="total"
-                                class="text-[#11111180]">205.60</span> TK</p>
-                        <button id="makePurchase" class="bg-[#E527B2] text-white px-2 py-1 rounded-md w-10/12"
+                                class="text-[#11111180]">00.00</span> TK</p>
+                        <button id="btnMakePurchase" class="bg-[#E527B2] text-white px-2 py-1 rounded-md w-10/12"
                             disabled>Make Purchase</button>
                     </div>
                 </div>
@@ -266,8 +266,7 @@
 
         </section>
     </main>
-    <footer></footer>
-
+<script src="./JavaScript/Script.js"></script>
 </body>
 
 </html>
