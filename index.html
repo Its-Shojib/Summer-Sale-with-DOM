@@ -19,6 +19,7 @@
     <link href="https://cdn.jsdelivr.net/npm/daisyui@3.5.1/dist/full.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
 
+    <!-- Style for google-font -->
     <style>
         .font-WorkSans {
             font-family: 'Work Sans', sans-serif;
@@ -50,6 +51,7 @@
             <div class="flex flex-col lg:flex-row">
 
                 <div class="flex-1">
+                    <!-- Kitchenware -->
                     <h1 class="text-3xl my-5 font-bold">Kitchenware</h1>
                     <!-- Cards -->
                     <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-5">
@@ -112,6 +114,7 @@
                         </div>
 
                     </div>
+                    <!-- Sportswear -->
                     <h1 class="text-3xl my-5 font-bold">Sportswear</h1>
                     <!-- Cards -->
                     <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-5">
@@ -173,6 +176,7 @@
                         </div>
 
                     </div>
+                    <!-- Furniture -->
                     <h1 class="text-3xl my-5 font-bold">Furniture</h1>
                     <!-- Cards -->
                     <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-5">
@@ -237,20 +241,20 @@
                     </div>
                 </div>
 
-                <!-- Purchase -->
+                <!-- Purchase Section-->
                 <div class="w-full lg:w-96 pt-5 md:pt-[70px] lg:pl-10">
-                    <!-- Coupon -->
+                    <!-- Coupon Code-->
                     <div class="space-y-3 py-3 px-1 bg-white w-full lg:w-10/12 text-center lg:text-left">
                         <h1 class="font-semibold">Have Coupon?</h1>
                         <input class="p-2 border" type="text" name="" id="inputCoupon" placeholder="Coupon code">
-                        <button id="btnCoupon" class="bg-[#E527B2] text-white px-2 py-1 rounded-md"
+                        <button id="btnCoupon" class="bg-[#E527B2] text-white px-2 py-2 rounded-md"
                             disabled>Apply</button>
                     </div>
-                    <!-- Container -->
+                    <!-- Container for add Cart items-->
                     <div id="container"
                         class="h-52 bg-white pl-3 text-lg text-center lg:text-left mt-5 w-full lg:w-10/12 overflow-y-auto ">
                     </div>
-                    <!-- Make Purchase -->
+                    <!-- Make Purchase and Total Prices with discount -->
                     <div class="h-fit bg-white py-3 mt-5 w-full lg:w-10/12 space-y-3 text-center lg:text-left">
                         <p class="text-2xl font-bold">Total price: <span id="totalPrice"
                                 class="text-[#11111180]">00.00</span> TK</p>
@@ -258,28 +262,27 @@
                                 class="text-[#11111180]">00.00</span> TK</p>
                         <p class="text-2xl font-bold pb-5">Total: <span id="total" class="text-[#11111180]">00.00</span>
                             TK</p>
+                        <!-- Open the modal using ID.showModal() method -->
                         <button id="btnMakePurchase" onclick="my_modal.showModal()" class="bg-[#E527B2] text-white px-2 py-1 rounded-md w-10/12"
                             disabled>Make Purchase</button>
                     </div>
-                    <!-- Open the modal using ID.showModal() method -->
-                    <!-- <button class="btn" onclick="my_modal_5.showModal()">open modal</button> -->
+                    <!-- Modals Section -->
                     <dialog id="my_modal" class="modal modal-bottom sm:modal-middle">
                         <form method="dialog" class="modal-box text-center lg:w-fit">
-                            <img class="mx-auto lg:px-20 lg:mt-10" src="./asset/congo.png" alt="">
+                            <img class="mx-auto lg:px-20 lg:mt-10" src="./asset/congo.png" alt="Congratulations">
                             <h3 class="font-extrabold text-2xl lg:text-3xl">Congratulations</h3>
                             <p class="py-4">Your Purchase the product</p>
                             <div class="text-center lg:mb-10">
-                                <!-- if there is a button in form, it will close the modal -->
+                                <!-- this button will close the modal -->
                                 <button id="goHome" class="bg-[#E527B2] text-white px-2 py-1 rounded-md">Go Home</button>
                             </div>
                         </form>
                     </dialog>
                 </div>
             </div>
-
-
         </section>
     </main>
+    <!-- JavaScript Connetion Added -->
     <script src="./JavaScript/Script.js"></script>
 </body>
 
