@@ -66,7 +66,7 @@ function addToCart(event) {
 btnApply.addEventListener("click", function () {
     let couponField = document.getElementById("inputCoupon");
     let couponText = couponField.value;
-    if (couponText == "SELL20") {
+    if (couponText == "SELL200") {
         let totalPrice = getValue("totalPrice");
         let discount = (totalPrice / 100) * 20;
         let Total = totalPrice - discount;
